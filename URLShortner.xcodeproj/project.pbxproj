@@ -12,6 +12,8 @@
 		5BAA467E20435A2300A9BEAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BAA467C20435A2300A9BEAE /* Main.storyboard */; };
 		5BAA468020435A2300A9BEAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BAA467F20435A2300A9BEAE /* Assets.xcassets */; };
 		5BAA468320435A2300A9BEAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BAA468120435A2300A9BEAE /* LaunchScreen.storyboard */; };
+		5BAA468E2043741C00A9BEAE /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA468D2043741C00A9BEAE /* APIClient.swift */; };
+		5BAA46902043743A00A9BEAE /* GoogleAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA468F2043743A00A9BEAE /* GoogleAPIClient.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		5BAA467F20435A2300A9BEAE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BAA468220435A2300A9BEAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BAA468420435A2300A9BEAE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BAA468D2043741C00A9BEAE /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		5BAA468F2043743A00A9BEAE /* GoogleAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAPIClient.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +88,18 @@
 		5BAA468C20435A7500A9BEAE /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5BAA46912043745A00A9BEAE /* Remote */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5BAA46912043745A00A9BEAE /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				5BAA468D2043741C00A9BEAE /* APIClient.swift */,
+				5BAA468F2043743A00A9BEAE /* GoogleAPIClient.swift */,
+			);
+			path = Remote;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -162,6 +176,8 @@
 			files = (
 				5BAA467B20435A2300A9BEAE /* ViewController.swift in Sources */,
 				5BAA467920435A2300A9BEAE /* AppDelegate.swift in Sources */,
+				5BAA46902043743A00A9BEAE /* GoogleAPIClient.swift in Sources */,
+				5BAA468E2043741C00A9BEAE /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
