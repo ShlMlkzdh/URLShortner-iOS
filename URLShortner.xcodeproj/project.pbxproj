@@ -55,13 +55,37 @@
 			isa = PBXGroup;
 			children = (
 				5BAA467820435A2300A9BEAE /* AppDelegate.swift */,
-				5BAA467A20435A2300A9BEAE /* ViewController.swift */,
-				5BAA467C20435A2300A9BEAE /* Main.storyboard */,
+				5BAA468C20435A7500A9BEAE /* Model */,
+				5BAA468B20435A6800A9BEAE /* Views */,
+				5BAA468A20435A5E00A9BEAE /* Controllers */,
 				5BAA467F20435A2300A9BEAE /* Assets.xcassets */,
-				5BAA468120435A2300A9BEAE /* LaunchScreen.storyboard */,
 				5BAA468420435A2300A9BEAE /* Info.plist */,
 			);
 			path = URLShortner;
+			sourceTree = "<group>";
+		};
+		5BAA468A20435A5E00A9BEAE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5BAA467A20435A2300A9BEAE /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5BAA468B20435A6800A9BEAE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5BAA467C20435A2300A9BEAE /* Main.storyboard */,
+				5BAA468120435A2300A9BEAE /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5BAA468C20435A7500A9BEAE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -278,7 +302,7 @@
 				DEVELOPMENT_TEAM = VFDL67P7V7;
 				INFOPLIST_FILE = URLShortner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.shlmlkzdh.URLShortner;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shlmlkzdh.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -293,7 +317,7 @@
 				DEVELOPMENT_TEAM = VFDL67P7V7;
 				INFOPLIST_FILE = URLShortner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.shlmlkzdh.URLShortner;
+				PRODUCT_BUNDLE_IDENTIFIER = com.shlmlkzdh.demo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
