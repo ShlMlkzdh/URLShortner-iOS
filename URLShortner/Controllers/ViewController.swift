@@ -47,7 +47,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         let urlData = urlDataList[indexPath.row]
         cell.textLabel?.text = urlData.longURL?.absoluteString
         cell.detailTextLabel?.text = urlData.shortURL?.absoluteString
-        cell.accessoryType = .disclosureIndicator
         return cell
     }
     
@@ -55,6 +54,19 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         tableView.deselectRow(at: indexPath, animated: true)
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            do {
+                let dataURL = urlDataList.remove(at: indexPath.row)
+                dataController.viewContext.delete(dataURL)
+                try self.dataController.viewContext.save()
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            } catch {
+                self.showErrorDialog("Oops! Something went wrong. Please try again later.")
+            }
+        }
+    }
+
     private func getURLDataList(_ context: NSManagedObjectContext) -> [URLData]? {
         let fetchRequest: NSFetchRequest<URLData> = URLData.fetchRequest()
         let sortDescriptor =
