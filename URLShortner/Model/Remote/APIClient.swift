@@ -8,6 +8,10 @@
 
 import Foundation
 
+public typealias Callback = (URLData?, Error?) -> Void
+
 protocol APIClient {
+    
+    func shortenURL(_ string: String, _ completion: @escaping Callback)
     
 }
