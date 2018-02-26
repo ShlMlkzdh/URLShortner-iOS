@@ -52,9 +52,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let viewController = DetailViewController.instantiateViewController(storyboard)
-        let dataURL = urlDataList[indexPath.row]
-        viewController.title = dataURL.shortURL?.absoluteString
+        let urlData = urlDataList[indexPath.row]
+        let viewController = DetailViewController.instantiateViewController(storyboard, urlData)
         navigationController?.pushViewController(viewController, animated: true)
     }
     

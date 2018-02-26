@@ -10,8 +10,17 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    static func instantiateViewController(_ storyboard: UIStoryboard?) -> DetailViewController {
-        return storyboard?.instantiateViewController(withIdentifier: "detailViewController") as! DetailViewController
+    var urlData: URLData!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        title = urlData.shortURL?.absoluteString
+    }
+    
+    static func instantiateViewController(_ storyboard: UIStoryboard?, _ urlData: URLData) -> DetailViewController {
+        let viewController = storyboard?.instantiateViewController(withIdentifier: "detailViewController") as! DetailViewController
+        viewController.urlData = urlData
+        return viewController
     }
     
 }
