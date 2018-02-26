@@ -39,7 +39,18 @@ class GoogleAPIClient: APIClient {
             if error != nil {
                 completion(nil, error)
             } else {
-                // Implement the parsing and getting the short URL here.
+                do {
+                    let responseJSON = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.allowFragments)
+                    if let dictionary = responseJSON as? [String: Any] {
+                        if let shortURLString = dictionary["id"] as? String {
+                            let shortURL = URL(string: shortURLString)
+                            if let shortURL = shortURL {
+                                completion(shortURL, nil)
+                            }
+                        }
+                    }
+                } catch {
+                }
             }
         }
         dataTask.resume()
