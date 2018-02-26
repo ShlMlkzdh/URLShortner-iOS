@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B42FA8820439B4B0015773E /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B42FA8720439B4B0015773E /* DataController.swift */; };
 		5BAA467920435A2300A9BEAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA467820435A2300A9BEAE /* AppDelegate.swift */; };
 		5BAA467B20435A2300A9BEAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA467A20435A2300A9BEAE /* ViewController.swift */; };
 		5BAA467E20435A2300A9BEAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BAA467C20435A2300A9BEAE /* Main.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B42FA8720439B4B0015773E /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 		5BAA467520435A2300A9BEAE /* URLShortner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URLShortner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BAA467820435A2300A9BEAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BAA467A20435A2300A9BEAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -92,6 +94,7 @@
 			children = (
 				5BAA46912043745A00A9BEAE /* Remote */,
 				5BAA4692204374C800A9BEAE /* URLData.xcdatamodeld */,
+				5B42FA8720439B4B0015773E /* DataController.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5BAA4694204374C800A9BEAE /* URLData.xcdatamodeld in Sources */,
+				5B42FA8820439B4B0015773E /* DataController.swift in Sources */,
 				5BAA467B20435A2300A9BEAE /* ViewController.swift in Sources */,
 				5BAA467920435A2300A9BEAE /* AppDelegate.swift in Sources */,
 				5BAA46902043743A00A9BEAE /* GoogleAPIClient.swift in Sources */,
