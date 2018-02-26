@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class GoogleAPIClient: APIClient {
     
@@ -38,7 +39,7 @@ class GoogleAPIClient: APIClient {
             if error != nil {
                 completion(nil, error)
             } else {
-                // Handle the statusCode = 200
+                // Implement the parsing and getting the short URL here.
             }
         }
         dataTask.resume()

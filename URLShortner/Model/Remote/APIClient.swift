@@ -8,7 +8,7 @@
 
 import Foundation
 
-public typealias Callback = (URLData?, Error?) -> Void
+public typealias Callback = (URL?, Error?) -> Void
 
 protocol APIClient {
     
