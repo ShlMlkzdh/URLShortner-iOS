@@ -30,6 +30,11 @@ class DetailViewController: UIViewController, WKNavigationDelegate {
         webView.isHidden = false
     }
     
+    @IBAction func shareShortURL(_ sender: UIBarButtonItem) {
+        let viewController = UIActivityViewController(activityItems: [urlData.shortURL!], applicationActivities: nil)
+        present(viewController, animated: true, completion: nil)
+    }
+    
     static func instantiateViewController(_ storyboard: UIStoryboard?, _ urlData: URLData) -> DetailViewController {
         let viewController = storyboard?.instantiateViewController(withIdentifier: "detailViewController") as! DetailViewController
         viewController.urlData = urlData

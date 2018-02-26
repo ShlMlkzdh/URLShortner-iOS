@@ -115,6 +115,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="bRW-pc-Oh3"/>
                     </view>
+                    <navigationItem key="navigationItem" id="nT7-ku-0op">
+                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="5OX-wn-EOP">
+                            <connections>
+                                <action selector="shareShortURL:" destination="diR-Pc-71o" id="HcC-kE-y85"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="activityIndicator" destination="eV2-nO-xuV" id="TBQ-Oz-HC0"/>
                         <outlet property="webView" destination="peC-SO-nbT" id="4gb-vS-M8E"/>
