@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5B42FA8820439B4B0015773E /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B42FA8720439B4B0015773E /* DataController.swift */; };
+		5B42FA8A2043B56A0015773E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B42FA892043B56A0015773E /* DetailViewController.swift */; };
 		5BAA467920435A2300A9BEAE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA467820435A2300A9BEAE /* AppDelegate.swift */; };
 		5BAA467B20435A2300A9BEAE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BAA467A20435A2300A9BEAE /* ViewController.swift */; };
 		5BAA467E20435A2300A9BEAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BAA467C20435A2300A9BEAE /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		5B42FA8720439B4B0015773E /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		5B42FA892043B56A0015773E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		5BAA467520435A2300A9BEAE /* URLShortner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = URLShortner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BAA467820435A2300A9BEAE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BAA467A20435A2300A9BEAE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 			isa = PBXGroup;
 			children = (
 				5BAA467A20435A2300A9BEAE /* ViewController.swift */,
+				5B42FA892043B56A0015773E /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 				5BAA467920435A2300A9BEAE /* AppDelegate.swift in Sources */,
 				5BAA46902043743A00A9BEAE /* GoogleAPIClient.swift in Sources */,
 				5BAA468E2043741C00A9BEAE /* APIClient.swift in Sources */,
+				5B42FA8A2043B56A0015773E /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
