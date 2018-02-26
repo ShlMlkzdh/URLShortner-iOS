@@ -74,7 +74,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="URL Shortner" id="hfO-k6-QdC"/>
+                    <navigationItem key="navigationItem" title="URL Shortner" id="hfO-k6-QdC">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Qhx-Lt-Ed8"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="rh6-sZ-Edk" id="qTg-rr-NnK"/>
                     </connections>
@@ -90,9 +92,33 @@
                     <view key="view" contentMode="scaleToFill" id="OEy-kW-GkS">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="peC-SO-nbT">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="eV2-nO-xuV">
+                                <rect key="frame" x="177" y="333" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bRW-pc-Oh3" firstAttribute="bottom" secondItem="peC-SO-nbT" secondAttribute="bottom" id="50h-1Z-lYh"/>
+                            <constraint firstItem="peC-SO-nbT" firstAttribute="leading" secondItem="bRW-pc-Oh3" secondAttribute="leading" id="WsU-cN-3d3"/>
+                            <constraint firstItem="bRW-pc-Oh3" firstAttribute="trailing" secondItem="peC-SO-nbT" secondAttribute="trailing" id="eok-s4-C0M"/>
+                            <constraint firstItem="peC-SO-nbT" firstAttribute="top" secondItem="bRW-pc-Oh3" secondAttribute="top" id="tiW-2Y-9h6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="bRW-pc-Oh3"/>
                     </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="eV2-nO-xuV" id="TBQ-Oz-HC0"/>
+                        <outlet property="webView" destination="peC-SO-nbT" id="4gb-vS-M8E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q9s-fQ-LIe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

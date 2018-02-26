@@ -7,14 +7,27 @@
 //
 
 import UIKit
+import WebKit
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, WKNavigationDelegate {
     
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var webView: WKWebView!
     var urlData: URLData!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        title = urlData.shortURL?.absoluteString
+        activityIndicator.startAnimating()
+        webView.isHidden = true
+        webView.navigationDelegate = self
+        webView.load(URLRequest(url: URL(string: (urlData.shortURL?.absoluteString)!)!))
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        activityIndicator.stopAnimating()
+        activityIndicator.isHidden = true
+        title = webView.title
+        webView.isHidden = false
     }
     
     static func instantiateViewController(_ storyboard: UIStoryboard?, _ urlData: URLData) -> DetailViewController {
